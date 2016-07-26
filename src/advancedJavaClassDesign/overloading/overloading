@@ -1,0 +1,8 @@
+For overloading, the method parameters must vary by type and/or number. When 
+multiple overloaded methods are present, Java looks for the closest match first. 
+It tries to find the following:
+■ Exact match by type
+■ Matching a superclass type
+■ Converting to a larger primitive type
+■ Converting to an autoboxed type
+■ Varargs

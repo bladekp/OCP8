@@ -1,0 +1,8 @@
+Overriding occurs only when the method signature is the same. The method 
+signature is the method name and the parameter list.
+For overriding, the overridden method has a few rules:
+■ The access modifier must be the same or more accessible.
+■ The return type must be the same or a more restrictive type, also known as covariant
+return types.
+■ If any checked exceptions are thrown, only the same exceptions or subclasses of those
+exceptions are allowed to be thrown.
