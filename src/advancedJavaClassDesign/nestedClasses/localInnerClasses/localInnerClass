@@ -1,0 +1,23 @@
+■ They do not have an access specifier.
+■ They cannot be declared static and cannot declare static fields or methods.
+■ They have access to all fields and methods of the enclosing class.
+■ They do not have access to local variables of a method unless those variables are final
+or effectively final.
+
+
+34: public void isItFinal() {
+35:     int one = 20;
+36:     int two = one;
+37:     two++;
+38:     int three;
+39:     if ( one == 4) three = 3;
+40:     else three = 4;
+41:     int four = 4;
+42:     class Inner { }
+43:     four = 5;
+44: }
+one is effectively final. It is only set in the line in which it is declared. two is not effec-
+tively final. The value is changed on line 37 after it is declared. three is effectively final
+because it is assigned only once. This assignment may happen in either branch of the if
+statement, but it can happen in only one of them. four is not effectively final. Even though
+the assignment happens after the inner class, it is not allowed.
